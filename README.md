@@ -44,6 +44,36 @@ example if you're only sharing text, you may get a "Copy" option which isn't ver
 This selection will allow you to explicitly hide options that you do not want to show. Many are 
 disabled by default. 
 
+
+Custom Platforms
+----------------
+
+Diffusion offers an interface for using external UIActivities. To use them, you need to include the 
+files provided by the UIActivity into `Plugins/iOS` in your Unity project, and add the class to the
+Custom Platforms field on the Diffusion prefab.
+
+In order for Diffusion to access the classes for your custom UIActivity, you'll need to create a new 
+category that includes the headers. You can do this through the new file menu in Xcode, or by hand. 
+Here's a template:
+
+**Diffusion+SomeCustomActivity.h:**
+```objc
+#import "Diffusion.h"
+
+// Include your UIActivity header here
+#import "SomeCustomActivity.h"
+
+@interface Diffusion (Instagram)
+@end
+```
+
+**Diffusion+SomeCustomActivity.m:**
+```objc
+#import "Diffusion+Instagram.h"
+
+@implementation Diffusion (Instagram)
+@end
+```
 ***
 
 
