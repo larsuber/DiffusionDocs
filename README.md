@@ -20,8 +20,8 @@ Requirements
 ***
 
 
-Installation
-============
+Getting Started
+===============
 
 Install the Unity package and drop the Diffusion prefab into your scene, then you're ready to go. 
 
@@ -56,6 +56,37 @@ In order for Diffusion to access the classes for your custom UIActivity, you'll 
 category that includes the headers. You can do this through the new file menu in Xcode, or by hand. 
 A template is included in the `Custom Platforms` folder. 
 
+***
+
+
+Methods
+=======
+
+Sharing
+-------
+
+#### Share()
+> Shares the message and URL set in the inspector. 
+
+#### Share(string message, string filePath)
+> Shares the message provided, and a file.
+
+#### Share(string message, string url, string filePath)
+> Shares a message, URL, and file as provided.
+
+
+Accounts
+--------
+
+#### isFacebookConnected()
+> Checks if the user has logged into Facebook.
+
+####  isTwitterConnected()
+> Checks if the user has logged into Twitter.
+
+
+***
+
 
 Messages
 ========
@@ -63,14 +94,14 @@ Messages
 If you connect a GameObject into the Event Receiver field on the Diffusion prefab, it will these 
 messages will be sent to it.
 
-> Do **not** put your event receiver script on the prefab.
+Do **not** put your event receiver script on the prefab.
 
 
 #### OnCompleted(DiffusionPlatform platform) 
-Sharing completed successfully. Returns the platform the user selected to share with.
+> Sharing completed successfully. Returns the platform the user selected to share with.
 
 #### OnCancelled()
-User cancelled the sharing process. 
+> User cancelled the sharing process. 
 
 
 Delegates
@@ -87,6 +118,10 @@ Notes
 
 * Twitter's URL shortener assumed any URL to be 22 characters (20, plus spaces). In reality, there
 is a bug in the UIActivity's character counting, and URLs show as 36 characters. 
+* There is an included PostProcessDiffusion script, which is used to add Social.framework to your 
+Xcode project. If this only to enable the `isFacebookConnected()` and `isTwitterConnected()` checks. 
+If the post-process script is causing problems for your project and you don't need these functions, 
+you can remove it. 
 
 ***
 
