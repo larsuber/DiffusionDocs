@@ -54,27 +54,7 @@ Custom Platforms field on the Diffusion prefab.
 
 In order for Diffusion to access the classes for your custom UIActivity, you'll need to create a new 
 category that includes the headers. You can do this through the new file menu in Xcode, or by hand. 
-Here's a template:
-
-**Diffusion+SomeCustomActivity.h:**
-```objc
-#import "Diffusion.h"
-
-// Include your UIActivity header here
-#import "SomeCustomActivity.h"
-
-@interface Diffusion (Instagram)
-@end
-```
-
-**Diffusion+SomeCustomActivity.m:**
-```objc
-#import "Diffusion+Instagram.h"
-
-@implementation Diffusion (Instagram)
-@end
-```
-***
+A template is included in the `Templates` folder. 
 
 
 Messages
