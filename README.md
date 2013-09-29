@@ -54,7 +54,7 @@ Custom Platforms field on the Diffusion prefab.
 
 In order for Diffusion to access the classes for your custom UIActivity, you'll need to create a new 
 category that includes the headers. You can do this through the new file menu in Xcode, or by hand. 
-A template is included in the `Templates` folder. 
+A template is included in the `Custom Platforms` folder. 
 
 
 Messages
