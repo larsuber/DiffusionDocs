@@ -126,8 +126,4 @@ you can remove it.
 ***
 
 
-Support
-=======
-
-For support or to report any issues, please contact me at [cbaltzer@gmail.com](mailto:cbaltzer@gmail.com) or [@cbaltzer](https://twitter.com/cbaltzer) on Twitter.
 
